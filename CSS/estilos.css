@@ -1,0 +1,142 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Century Gothic';
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+img{
+	max-width: 100%;
+}
+
+.titulo{
+	width: 100%;
+	height: 300px;
+	background-image: url(../IMG/portada.jpg);
+	background-size: 100%;
+	animation: movimiento 10s infinite;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.title {
+	animation: colores 10s infinite;
+	font-size: 35px;
+	font-weight: 100;
+    text-align: center;
+}
+
+.navegacion{
+
+	width: 100%;
+	background: #1C1C1C;
+	display: flex;
+	justify-content: center;
+
+}
+
+.menu{
+	width: 1000px;
+	display: flex;
+	flex-wrap: wrap;
+	
+	height: 100px;
+}
+
+.menu li{
+	flex-basis: 0;
+	flex-grow: 1;
+	border-right: 1px solid #363636;
+	position: relative;
+
+}
+
+.menu first-item{
+
+	border-left: 1px solid #363636;
+}
+
+.menu li a{
+
+	display: flex;
+	flex-direction: column;
+	font-size: 18px;
+}
+
+.menu .imagen{
+	position: absolute;
+	bottom: 0;
+	right: 30px;
+	width: 0%;
+	z-index: 20;
+	transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+	transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+
+}
+
+
+.menu li a .text-item{
+
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	top: 0%;
+	position: absolute; 
+	z-index: 10; 
+	transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+	transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+
+}
+.menu li a .down-item{
+	position: absolute;   
+	top: 0%;
+	width: 100%;
+	height:100%;
+	background: #1C1C1C;
+	transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+	transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+}
+
+.menu li:hover .down-item,.menu li:hover .text-item{
+	top: 100%;
+	height: 115%;
+}
+
+.menu li:hover .imagen{
+	width: 100%;
+	right: 0px;
+}
+@keyframes movimiento{
+	from{
+		background-position: top;
+	}to{
+		background-position: bottom;
+	}
+}
+
+@keyframes colores{
+    0% {color: #000;} /*Azul*/
+   25% {color: #ffffff;} /*Azul Oscuro*/
+   50% {color: #000;} /*Blanco*/
+   75% {color: #ffffff;} /*Verde*/
+  100% {color: #000;} /*Negro*/
+}
+
