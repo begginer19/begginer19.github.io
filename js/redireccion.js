@@ -23,6 +23,9 @@ function mangaOnePiece(){
 	window.open('https://one-piece-fans.com/manga/es/rioponeglyph-scan.php?id=1048', '_blank');
 	
 }
+function amen(){
+	alert("Oracion Enviada ...");
+}
 window.onload=function(){
 
 
@@ -30,13 +33,14 @@ window.onload=function(){
 	var boton2= document.getElementById("blackClover");
 	var boton3= document.getElementById("jujutsuKaisen");
 	var boton4= document.getElementById("Naruto");
-	var boton5= document.getElementById("onePiece")
+	var boton5= document.getElementById("onePiece");
+	var boton6= document.getElementById("Amen");
 	boton.addEventListener("click",mangaDragonBall,false);
 	boton2.addEventListener("click",mangaBlackClover,false);
 	boton3.addEventListener("click",mangaJujutsuKaisen,false);
 	boton4.addEventListener("click",mangaNaruto,false);
 	boton5.addEventListener("click",mangaOnePiece,false);
-
+	boton6.addEventListener("click",amen,false);
 
 }
 
